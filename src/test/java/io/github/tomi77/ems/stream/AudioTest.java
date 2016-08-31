@@ -1,7 +1,7 @@
-package io.github.tomi77.ems;
+package io.github.tomi77.ems.stream;
 
-import io.github.tomi77.ems.stream.Audio;
-import io.github.tomi77.ems.stream.AudioImpl;
+import io.github.tomi77.ems.stream.stream.Audio;
+import io.github.tomi77.ems.stream.stream.AudioImpl;
 import junit.framework.TestCase;
 import org.junit.Assert;
 
