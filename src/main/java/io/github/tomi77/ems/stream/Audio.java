@@ -3,7 +3,7 @@ package io.github.tomi77.ems.stream;
 /**
  * Stats about the audio portion of the stream.
  */
-interface Audio {
+public interface Audio {
     /**
      * Get total amount of audio data received
      * Ex. 727893
@@ -39,6 +39,4 @@ interface Audio {
      * Ex. 2243
      */
     Integer getPacketsCount();
-
-    void fromJson();
 }

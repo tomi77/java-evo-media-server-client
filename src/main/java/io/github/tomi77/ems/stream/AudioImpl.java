@@ -3,7 +3,7 @@ package io.github.tomi77.ems.stream;
 /**
  * Stats about the audio portion of the stream.
  */
-class AudioImpl implements Audio {
+public class AudioImpl implements Audio {
     private Integer bytesCount;
 
     private String codec;
@@ -15,6 +15,19 @@ class AudioImpl implements Audio {
     private Integer droppedPacketsCount;
 
     private Integer packetsCount;
+
+    public AudioImpl(Integer bytesCount, String codec, Long codecNumeric, Integer droppedBytesCount, Integer droppedPacketsCount, Integer packetsCount) {
+        this.bytesCount = bytesCount;
+        this.codec = codec;
+        this.codecNumeric = codecNumeric;
+        this.droppedBytesCount = droppedBytesCount;
+        this.droppedPacketsCount = droppedPacketsCount;
+        this.packetsCount = packetsCount;
+    }
+
+    public AudioImpl(Integer bytesCount, String codec, String codecNumeric, Integer droppedBytesCount, Integer droppedPacketsCount, Integer packetsCount) {
+        this(bytesCount, codec, Long.parseUnsignedLong(codecNumeric), droppedBytesCount, droppedPacketsCount, packetsCount);
+    }
 
     public Integer getBytesCount() {
         return bytesCount;
@@ -38,9 +51,5 @@ class AudioImpl implements Audio {
 
     public Integer getPacketsCount() {
         return packetsCount;
-    }
-
-    public void fromJson() {
-        throw new UnsupportedOperationException("Not implemented, yet.");
     }
 }
