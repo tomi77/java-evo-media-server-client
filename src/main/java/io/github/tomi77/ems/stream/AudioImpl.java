@@ -29,26 +29,32 @@ public class AudioImpl implements Audio {
         this(bytesCount, codec, Long.parseUnsignedLong(codecNumeric), droppedBytesCount, droppedPacketsCount, packetsCount);
     }
 
+    @Override
     public Integer getBytesCount() {
         return bytesCount;
     }
 
+    @Override
     public String getCodec() {
         return codec;
     }
 
+    @Override
     public Long getCodecNumeric() {
         return codecNumeric;
     }
 
+    @Override
     public Integer getDroppedBytesCount() {
         return droppedBytesCount;
     }
 
+    @Override
     public Integer getDroppedPacketsCount() {
         return droppedPacketsCount;
     }
 
+    @Override
     public Integer getPacketsCount() {
         return packetsCount;
     }
