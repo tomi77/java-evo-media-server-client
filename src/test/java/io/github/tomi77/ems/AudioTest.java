@@ -1,14 +1,13 @@
-package ems;
+package io.github.tomi77.ems;
 
 import io.github.tomi77.ems.stream.Audio;
 import io.github.tomi77.ems.stream.AudioImpl;
+import junit.framework.TestCase;
 import org.junit.Assert;
-import org.junit.Test;
 
-public class AudioTests {
+public class AudioTest extends TestCase {
 
-    @Test
-    public void multiplicationOfZeroIntegersShouldReturnZero() {
+    public void testConstructorAndGetters() {
         Audio audio = new AudioImpl(727893, "AAAC", "4702111241970122752", 0, 0, 2243);
 
         // assert statements
